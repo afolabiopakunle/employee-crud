@@ -121,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "employee-crud"
+  "defaultProject": "employee-crud",
+  "cli": {
+    "analytics": "8f8f01c4-fb05-4613-9c70-6c932ee8b09f"
+  }
 }
