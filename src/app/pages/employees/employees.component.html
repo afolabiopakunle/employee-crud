@@ -9,6 +9,7 @@
                 <td>Email</td>
                 <td>Phone Number</td>
                 <td></td>
+                <td></td>
         </thead>
         <tbody>
             <tr *ngFor="let employee of employees; let i = index">
@@ -16,7 +17,8 @@
               <td>{{ employee.name }}</td>
               <td>{{ employee.email }}</td>
               <td>{{ employee.phoneNumber }}</td>
-              <td><a [routerLink]="['employee/edit', employee.id]">Edit</a></td>
+              <td><a class="btn btn-warning btn-sm" [routerLink]="['employee/edit', employee.id]">Edit</a></td>
+              <td><a class="btn btn-danger btn-sm">Delete</a></td>
             </tr>
         </tbody>
     </table>
