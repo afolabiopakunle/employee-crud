@@ -21,6 +21,13 @@ export class EmployeeService {
   console.log(foundId);
   }
 
+  deleteEmployee(id) {
+    let employee = this.employees.find(employee => id == employee.id )
+    console.log(employee);
+    let index = this.employees.indexOf(employee)
+    console.log(index);
+    // this.employees.splice(index, 1)
+  }
   employees: IEmployee[] = [
     {
       id: 22,
@@ -35,6 +42,13 @@ export class EmployeeService {
       position: 'Musician',
       phoneNumber: 8024447545,
       email: 'tunde.ednut@skype.com'
+    },
+    {
+      id: 13,
+      name: 'Dauda Dada',
+      position: 'Engineer',
+      phoneNumber: 8024885959,
+      email: 'dauda.dada@gmail.com'
     }
   ];
 

@@ -18,7 +18,7 @@
               <td>{{ employee.email }}</td>
               <td>{{ employee.phoneNumber }}</td>
               <td><a class="btn btn-warning btn-sm" [routerLink]="['employee/edit', employee.id]">Edit</a></td>
-              <td><a class="btn btn-danger btn-sm">Delete</a></td>
+              <td><a (click)="delete(employee.id)" class="btn btn-danger btn-sm"><img class="img-fluid" src="../../../assets/images/delete.png" alt=""></a></td>
             </tr>
         </tbody>
     </table>

@@ -14,23 +14,23 @@ export class EditComponent implements OnInit {
   header: string;
   form: FormGroup;
   constructor(private route: ActivatedRoute, private fb: FormBuilder, private employeeService: EmployeeService, private router: Router) { }
-  
+
   ngOnInit(): void {
     this.id = +this.route.snapshot.paramMap.get('id')
-   this.header = this.id === 0 ? 'Add Developer': 'Update Developer'
+    this.header = this.id === 0 ? 'Add Developer' : 'Update Developer'
 
-   this.form = this.fb.group({
-     id: ['', Validators.required],
-     name: ['', Validators.required],
-     jobTitle: ['', Validators.required],
-     email: ['', Validators.required],
-     phoneNumber: ['', Validators.required],
-   })
+    this.form = this.fb.group({
+      id: ['', Validators.required],
+      name: ['', Validators.required],
+      jobTitle: ['', Validators.required],
+      email: ['', Validators.required],
+      phoneNumber: ['', Validators.required]
+    })
   }
-
 
   submit(form: IEmployee) {
     this.employeeService.addEmployee(form)
     this.router.navigateByUrl('');
   }
+
 }
