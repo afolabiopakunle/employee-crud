@@ -30,5 +30,8 @@ export class EmployeeService {
     }
   ];
 
+  addEmployee(employee: IEmployee) {
+    this.employees.push(employee)
+  }
 
 }
