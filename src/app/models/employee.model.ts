@@ -3,5 +3,5 @@ export interface IEmployee {
     name: string,
     position: string,
     email: string,
-    phone: number
+    phoneNumber: number
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IEmployee } from 'src/app/models/employee.model';
 import { EmployeeService } from 'src/app/services/employee-services.service';
 
@@ -13,10 +13,10 @@ export class EditComponent implements OnInit {
   id: number;
   header: string;
   form: FormGroup;
-  constructor(private router: ActivatedRoute, private fb: FormBuilder, private employeeService: EmployeeService) { }
+  constructor(private route: ActivatedRoute, private fb: FormBuilder, private employeeService: EmployeeService, private router: Router) { }
   
   ngOnInit(): void {
-    this.id = +this.router.snapshot.paramMap.get('id')
+    this.id = +this.route.snapshot.paramMap.get('id')
    this.header = this.id === 0 ? 'Add Developer': 'Update Developer'
 
    this.form = this.fb.group({
@@ -28,8 +28,9 @@ export class EditComponent implements OnInit {
    })
   }
 
+
   submit(form: IEmployee) {
     this.employeeService.addEmployee(form)
-    
+    this.router.navigateByUrl('');
   }
 }
