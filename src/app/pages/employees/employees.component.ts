@@ -19,4 +19,8 @@ export class EmployeesComponent implements OnInit {
   delete(id: Number) {
     this.employeeService.deleteEmployee(id)
   }
+
+  // editEmployee(id) {
+  //  console.log(this.employeeService.editEmployee(id)); 
+  // }
 }

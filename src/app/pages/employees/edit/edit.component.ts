@@ -13,6 +13,7 @@ export class EditComponent implements OnInit {
   id: number;
   header: string;
   form: FormGroup;
+  employee: IEmployee;
   constructor(private route: ActivatedRoute, private fb: FormBuilder, private employeeService: EmployeeService, private router: Router) { }
 
   ngOnInit(): void {
@@ -26,6 +27,10 @@ export class EditComponent implements OnInit {
       email: ['', Validators.required],
       phoneNumber: ['', Validators.required]
     })
+
+    if (this.id !== 0) {
+      this.form.patchValue(this.employeeService.editEmployee(this.id))
+    }
   }
 
   submit(form: IEmployee) {
