@@ -30,26 +30,39 @@ export class EmployeeService {
 
   employees: IEmployee[] = [
     {
-      id: 22,
-      name: 'Jide Kosoko',
-      jobTitle: 'Actor',
+      id: 1,
+      name: 'Stacy Jackson',
+      jobTitle: 'Actress',
       phoneNumber: 8030021155,
-      email: 'jide.kosoko@yahoo.com'
+      email: 'stacyjackson@yahoo.com'
     },
     {
-      id: 11,
-      name: 'Tunde Ednut',
+      id: 2,
+      name: 'Tony Shawnt',
       jobTitle: 'Musician',
       phoneNumber: 8024447545,
-      email: 'tunde.ednut@skype.com'
+      email: 't.shawnt@skype.com'
     },
     {
-      id: 13,
-      name: 'Dauda Dada',
+      id: 3,
+      name: 'Michael Denver',
       jobTitle: 'Engineer',
       phoneNumber: 8024885959,
-      email: 'dauda.dada@gmail.com'
-    }
+      email: 'denver2001.michael@gmail.com'
+    },
+    {
+      id: 4,
+      name: 'Zara Larson',
+      jobTitle: 'Angular Developer',
+      phoneNumber: 8108192820,
+      email: 'zaralarson@hotmail.com'
+    },{
+      id: 5,
+      name: 'David Phillips',
+      jobTitle: 'Sr. Java Developer',
+      phoneNumber: 8092240454,
+      email: 'phillips.david@microsoft.com'
+    },
   ];
 
 }
